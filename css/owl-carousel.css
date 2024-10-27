@@ -1,0 +1,30 @@
+.owl-carousel {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.owl-carousel.owl-loaded {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10;
+    padding: 10px 0;
+}
+.owl-dot span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+.owl-dot.active span {
+    background-color: #333;
+}
