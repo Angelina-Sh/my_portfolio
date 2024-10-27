@@ -15,17 +15,26 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body id="body">
     <header id="header">
         <div class="logo">
             <a href="#"><img src="./images/logo.png" alt=""></a>
         </div>
-        <div class="nav">
+        <div class="nav_button" id="header_nav_button">
             <img src="./images/nav-icon.svg" alt="">
         </div>
+        <div class="nav_menu" id="header_nav_menu">
+            <div class="close_button" id="header_close_button">x</div>
+            <ul>
+                <a href="#header_main"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#work"><li>Work</li></a>
+                <a href="#footer_main"><li>Contacts</li></a>
+            </ul>
+        </div>
     </header>
-    <main>
-        <header id="header_main">
+    <main class="main_content fade-out" id="main_content">
+        <header id="header_main" class="for_crossed">
             <div class="hero-content">
                 <h1>Hello, world!</h1>
                 <article>My name is Angelina</article>
@@ -34,7 +43,7 @@
                 <div id="scroller"></div>
             </div>
         </header>
-        <section id="about">
+        <section id="about" class="for_crossed">
             <div class="about_item-left">
                 <img src="images/main_photo5.jpg" alt="">
             </div>
@@ -64,7 +73,7 @@
                 </div>
             </div>
         </section>
-        <section id="work">
+        <section id="work" class="for_crossed">
             <div class="work_item-left">
                 <div>
                 <h2>Work</h2>
@@ -97,7 +106,7 @@
                 </ul>
             </div>
         </section>
-        <footer class="footer_main">
+        <footer class="footer_main for_crossed" id="footer_main">
             <ul class="socials">
                 <li id="footer_telegram">
                     <a href="#">Telegram</a>
@@ -113,6 +122,7 @@
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
     <script src="js/script.js"></script>
 </body>
 

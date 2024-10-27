@@ -2,6 +2,24 @@
     margin: 0;
     padding: 0;
     font-family: "Roboto Mono", monospace;
+    scroll-behavior: smooth;
+}
+.main_content:before  {
+    content: '';
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.main_content.active:before {
+    opacity: 0.3; 
+}
+
+.main_content.fade-out:before {
+    opacity: 0; 
 }
 #header {
     position: fixed;
@@ -18,11 +36,52 @@
 #header div.logo{
     height: 50%;
 }
-#header div.nav{
+#header div.nav_button{
     height: 70%;
+    cursor: pointer;
 }
 #header div img {
     height: 100%;
+}
+div.nav_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #2f2f2f;
+    color: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+div.nav_menu a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+div.nav_menu a:hover {
+    color: #eeeeee;
+}
+div.nav_menu a.crossed, div.nav_menu a.active {
+    text-decoration: line-through;
+    color: #eeeeee;
+    font-size: 14pt; 
+}
+div.nav_menu .close_button {
+    background: transparent;
+    color: #ffffff;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+}
+div.nav_menu ul {
+    width: 150px;
+    height: 200px;
+    margin: 100px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 main #header_main {
     background: url("../images/main_bg.jpg");
@@ -77,6 +136,9 @@ main #header_main {
         opacity: 0;
     }
 }
+#about {
+    height: 660px;
+}
 .about_item-left {
     width: 50%;
     float: left;
@@ -122,6 +184,9 @@ th, td {
 #about_item-right_quote {
     text-align: center;
     font-style: italic;
+}
+#work {
+    height: 660px;
 }
 .work_item-left {
     width: 50%;
@@ -170,9 +235,11 @@ ul.portfolio-image li img {
 }
 .socials li {
     width: 100%;
-    list-style: none;
     font-size: 13px;
     padding: 20px;
+}
+li {
+    list-style: none;
 }
 .footer_main a {
     text-decoration: none;
