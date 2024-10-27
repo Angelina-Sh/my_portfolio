@@ -249,6 +249,7 @@ li {
 #footer_telegram, #footer_vk, #footer_email {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 #footer_telegram {
     background: #969696;
@@ -260,9 +261,12 @@ li {
     background: #d8d8d8;
 }
 #footer_telegram a, #footer_vk a, #footer_email a {
+    display: block;
     position: relative;
     z-index: 2; 
     color: #ffffff;
+    width: 100%;
+    height: 100%;
 }
 #footer_telegram:after, #footer_vk:after, #footer_email:after {
     content: '';
