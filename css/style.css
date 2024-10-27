@@ -3,8 +3,29 @@
     padding: 0;
     font-family: "Roboto Mono", monospace;
 }
-header {
-    background: url("images/hero1.jpeg");
+#header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: rgba(255, 255, 255, 0.7);
+}
+#header div.logo{
+    height: 50%;
+}
+#header div.nav{
+    height: 70%;
+}
+#header div img {
+    height: 100%;
+}
+main #header_main {
+    background: url("../images/main_bg.jpg");
+    background-size: cover;
     width: 100%;
     height: 100vh;
 }
@@ -14,16 +35,56 @@ header {
     padding: 65px;
     background: rgba(255, 255, 255, 0.8);
     outline: 4px double #FFFFFF;
+    outline-offset: 5px;
     margin: 0 auto;
     transform: translateY(100%);
 }
 .hero-content * {
     margin: 30px 15px;
 }
+#mouse_icon {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 27px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#scroller {
+    width: 5px;
+    height: 10px;
+    border-radius: 5px;
+    background: #000;
+    margin: 5px auto;
+    animation: scroller_animation 1s linear infinite;
+}
+@keyframes scroller_animation {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(5px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
 .about_item-left {
     width: 50%;
     float: left;
+    height: 660px;
     overflow: hidden;
+}
+.about_item-left img {
+    width: 100%;
+    filter: sepia(60%)
 }
 .about_item-right {
     width: 50%;
@@ -44,11 +105,13 @@ header {
     font-weight: bold;
     font-size: 10pt;
 }
-.about_item-right > div > img {
-    display: block;
-}
 .about_item-right > div * {
     margin: 25px;
+}
+
+#about_item-right_quote {
+    text-align: center;
+    font-style: italic;
 }
 .work_item-left {
     width: 50%;

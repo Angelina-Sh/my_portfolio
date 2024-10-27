@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
@@ -13,23 +15,40 @@
 </head>
 
 <body>
+    <header id="header">
+        <div class="logo">
+            <a href="#"><img src="./images/logo.png" alt=""></a>
+        </div>
+        <div class="nav">
+            <img src="./images/nav-icon.svg" alt="">
+        </div>
+    </header>
     <main>
-        <header>
+        <header id="header_main">
             <div class="hero-content">
-                <h1>Hello</h1>
-                <article>I'm a developer</article>
+                <h1>Hello, world!</h1>
+                <article>My name is Angelina</article>
+            </div>
+            <div id="mouse_icon">
+                <div id="scroller"></div>
             </div>
         </header>
         <section id="about">
             <div class="about_item-left">
-                <img src="images/reza.jpg" alt="">
+                <img src="images/main_photo5.jpg" alt="">
             </div>
             <div class="about_item-right">
-                <div>
-                    <p>Design is the method of putting form and content together. Design, just as art, has multiple
-                        definitions; there is no single definition. Design can be art.</p>
-                    <span>M. Reza</span>
-                    <img src="images/signature.png" alt="">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <p id="about_item-right_quote">"Web design is not just a job - it's a way to express myself."</p>
+                        <p>I am a frontend developer striving to create a unique experience for users. My passion for horses reminds me of the importance of being in harmony with  what you do to achieve the best results.</p>
+                        <span>A. Sharypina</span>
+                    </div>
+                    <div class="item">
+                        <p>"Web design is not just a job - it's a way to express myself."</p>
+                        <p>I am a frontend developer striving to create a unique experience for users. My passion for horses reminds me of the importance of being in harmony with  what you do to achieve the best results.</p>
+                        <span>A. Sharypina</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,6 +99,9 @@
             </ul>
         </footer>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
