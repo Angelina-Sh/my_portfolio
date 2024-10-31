@@ -91,6 +91,9 @@ div.nav_menu .close_button {
     z-index: -3;
 }
 /* main header */
+main {
+    width: 100%;
+}
 main #header_main {
     background: url("../images/main_bg.jpg");
     background-size: cover;
@@ -109,6 +112,12 @@ main #header_main {
 }
 .hero-content * {
     margin: 30px 15px;
+}
+.hero-content h1 {
+    font-size: 24pt;
+}
+.hero-content p {
+    font-size: 14pt;
 }
 #mouse_icon {
     position: absolute;
@@ -238,6 +247,7 @@ ul.portfolio-image {
 }
 .socials {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
