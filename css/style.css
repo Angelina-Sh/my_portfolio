@@ -205,6 +205,7 @@ th, td {
     display: flex;
     justify-content: space-between;
     background: #f6f6f6;
+    padding-bottom: 30px;
 }
 .work_item-left {
     width: 50%;
@@ -226,8 +227,8 @@ ul.portfolio-image {
     margin: 0px auto;
     padding: 30px;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-evenly;
+    align-content: space-evenly;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
@@ -235,9 +236,19 @@ ul.portfolio-image {
     width: auto;
     height: 45%;
 }
-.portfolio_item img {
+.portfolio-item-image {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.portfolio-item-image img {
     width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
 }
 /* FOOTER */
 .footer_main {

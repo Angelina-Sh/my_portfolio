@@ -1,7 +1,4 @@
 @media screen and (max-width: 1550px){
-    .work_item-right {
-        width: 50%;
-    }
     ul.portfolio-image {
         width: 100%;
         padding: 10px;
@@ -142,11 +139,15 @@
         width: 100%;
     }
     ul.portfolio-image {
-        gap: 0px;
+        gap: 30px 10px;
     }
     .portfolio_item {
         width: 45%;
         height: auto;
+    }
+    .portfolio-item-image {
+        width: 150px;
+        height: 150px;
     }
 }
 @media screen and (max-width: 375px) {
@@ -163,5 +164,14 @@
     }
     th, td {
         padding: 10px 5px;
+    }
+    
+    ul.portfolio-image {
+        width: 100%;
+        gap: 0px;
+    }
+    .portfolio_item {
+        width: 100%;
+        margin: 15px 0;
     }
 }

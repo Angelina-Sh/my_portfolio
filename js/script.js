@@ -2,6 +2,7 @@ const header_nav_button = document.getElementById('header_nav_button')
 const header_nav_menu = document.getElementById('header_nav_menu')
 const header_close_button = document.getElementById('header_close_button')
 const main_content = document.getElementById('main_content')
+const portfolioItems = document.querySelectorAll('.portfolio-item-image')
 
 header_nav_button.addEventListener('click', function() {
     header_nav_menu.style.transform = 'translateX(0)'
@@ -54,4 +55,20 @@ window.addEventListener('wheel', () => {
             link.classList.add('crossed')
         }
     })
+})
+
+portfolioItems.forEach(item => {
+    item.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        const img = item.querySelector('img'); 
+
+        let translateY = parseFloat(getComputedStyle(img).transform.split(',')[5]) || 0;
+
+        translateY -= event.deltaY; 
+
+        const maxTranslateY = img.offsetHeight - item.offsetHeight; 
+        translateY = Math.min(0, Math.max(-maxTranslateY, translateY)); 
+
+        img.style.transform = `translateY(${translateY}px)`;
+    });
 })
