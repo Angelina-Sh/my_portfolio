@@ -72,3 +72,4 @@ portfolioItems.forEach(item => {
         img.style.transform = `translateY(${translateY}px)`;
     });
 })
+
