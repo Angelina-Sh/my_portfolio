@@ -245,6 +245,8 @@ ul.portfolio-image {
 }
 .portfolio-item-image img {
     width: 100%;
+    border: 4px double #000;
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
